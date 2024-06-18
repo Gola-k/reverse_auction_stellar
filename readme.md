@@ -216,7 +216,7 @@ So, the NFT has been distributed, the auction contract has been deployed. We're 
 The auction contract has 4 functions:
 -setup_auction
 -get_bid_info
--sell_asset
+-sell_token
 -close_auction
 Don't take it from me, check it yourself:
 ```bash
@@ -237,9 +237,9 @@ soroban contract invoke \
 --source buyer \
 --network testnet \
 -- setup_auction \
---host buyer \
---auction_asset $(cat ../.soroban/nft_contract) \
---counter_asset $(cat ../.soroban/native_asset) \
+--buyer buyer \
+--auction_token $(cat ../.soroban/nft_contract) \
+--counter_token $(cat ../.soroban/native_asset) \
 --starting_bid 1000 \
 --bid_incr_amount 100 \
 --bid_incr_times 1000 \
@@ -292,7 +292,7 @@ soroban contract invoke \
 --id $(cat ../.soroban/soroban_auction) \
 --source seller \
 --network testnet \
--- sell_asset \
+-- sell_token \
 --seller seller
 ```
 They receive the Status AuctionFulfilled as return.

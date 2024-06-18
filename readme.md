@@ -3,7 +3,7 @@
 
 
 <p align="center">
-<a href="https://inquisitive-puppy-579037.netlify.app/">Live Demo</a><br/>
+<a href="https://reverseauction.netlify.app/">Live Demo</a><br/>
 Soroban | Rust | Astro 
 </p>
 
